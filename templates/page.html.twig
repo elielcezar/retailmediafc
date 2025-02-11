@@ -1,0 +1,45 @@
+{# Template padrão para todas as páginas que não têm template específico #}
+
+<header role="banner" id="mainheader">
+  <div class="container">        
+    {{ page.header }}
+  </div>
+</header>
+
+<div class="top">
+  <div class="container">
+    {{ page.top }}
+  </div>
+</div>
+
+<div class="extras-top">
+  <div class="container">
+    {{ page.extrastop }}
+  </div>
+</div>
+
+<main role="main">
+  <div class="container">
+    <div class="content">
+      {{ page.content }}
+    </div>
+
+    {% if page.sidebar %}
+      <aside class="sidebar">
+        {{ page.sidebar }}
+      </aside>
+    {% endif %}  
+  </div>
+</main>
+
+<div class="extras-bottom">
+  <div class="container">
+    {{ page.extrasbottom }}
+  </div>
+</div>
+
+{% if page.footer %}
+  <footer role="contentinfo">
+    {{ page.footer }}
+  </footer>
+{% endif %}

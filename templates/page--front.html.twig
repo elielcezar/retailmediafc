@@ -1,0 +1,88 @@
+{# Template específico para a página inicial #}
+{% if page.header %}
+    <header role="banner" id="mainheader">
+      <div class="container">        
+        {{ page.header }}
+      </div>
+    </header>
+{% endif %}
+
+<div class="top">  
+    {{ page.top }}  
+</div>
+
+<div class="extras-top">
+  <div class="container">
+    {{ page.extrastop }}
+  </div>
+</div>
+
+<main role="main" class="home">
+  <div class="container">
+    <div class="content">                
+      {{ drupal_view('noticia_home') }}      
+      {{ drupal_view('artigo_home') }}      
+      {{ drupal_view('agenda_home') }}
+    </div>
+    
+    <aside class="sidebar">      
+      {{ page.sidebar }}        
+    </aside>
+
+  </div>
+</main>
+
+<div class="extras-bottom">  
+  <div class="podcast">
+    <div class="container">
+      <div class="row">
+        <div class="col-1">          
+            <h2>Podcast</h2>
+            <p>Acompanhe os nossos podcasts com convidados especiais no YouTube.</p>
+        </div>
+        <div class="col-2">
+          {{ drupal_view('podcasts_home') }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+
+          <div class="col-1">
+            <h3>INSCREVA-SE E FAÇA PARTE<br/>
+                DA MAIOR COMUNIDADE DE<br/>
+                RETAIL MEDIA DO BRASIL
+            </h3>
+            <a href="#" class="btn">CADASTRO</a>
+          </div>
+
+          <div class="col-2">
+          </div>
+          
+          <div class="col-3">
+            <p>Siga-nos nas redes sociais:</p>
+            <ul class="social">
+              <li>
+                <a href="#">
+                  <img src="https://placehold.co/30x30" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="https://placehold.co/30x30" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="https://placehold.co/30x30" alt="">
+                </a>
+              </li>
+          </div>        
+        
+      </div>
+  </footer>

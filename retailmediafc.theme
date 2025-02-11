@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * Implementa hook_preprocess_html().
+ */
+function retailmediafc_preprocess_html(array &$variables) {
+  // Obtém a correspondência da rota atual.
+  $route_match = \Drupal::routeMatch();
+
+  // Adiciona a classe do tipo de node, se estiver na página de um node.
+  $node = $route_match->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    $variables['attributes']['class'][] = 'node-type-' . $node->bundle();
+    $variables['attributes']['class'][] = 'node-id-' . $node->id(); // Identificador único do node.
+  }
+
+  // Adiciona a classe do UID se for uma página de usuário.
+  $user = $route_match->getParameter('user');
+  if ($user instanceof \Drupal\user\Entity\User) {
+    $variables['attributes']['class'][] = 'user-id-' . $user->id(); // Identificador único do usuário.
+  }
+
+  // Adiciona a classe da rota atual.
+  $route_name = $route_match->getRouteName();
+  if (!empty($route_name)) {
+    $variables['attributes']['class'][] = 'route-' . str_replace('.', '-', $route_name);
+  }
+
+  // Adiciona um identificador único baseado na rota e entidade, se disponível.
+  $unique_id = '';
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    $unique_id = 'page-node-' . $node->id();
+  } elseif ($user instanceof \Drupal\user\Entity\User) {
+    $unique_id = 'page-user-' . $user->id();
+  } elseif (!empty($route_name)) {
+    $unique_id = 'page-' . str_replace('.', '-', $route_name);
+  }
+
+  // Adiciona o identificador único à classe.
+  if (!empty($unique_id)) {
+    $variables['attributes']['class'][] = $unique_id;
+  }
+}
+
+
+/**
+ * Implementa hook_theme_preprocess_html().
+ */
+function retailmediafc_theme_preprocess_html(array &$variables) {
+  // Defina o caminho para o seu favicon
+  $favicon_path = drupal_get_path('theme', 'retailmediafc') . '/css/img/favicon.png';
+
+  // Adiciona o favicon à tag <head> do HTML
+  $variables['#attached']['html_head'][] = [
+    [
+      '#tag' => 'link',
+      '#attributes' => [
+        'rel' => 'icon',
+        'href' => $favicon_path,
+        'type' => 'image/x-icon',
+      ],
+    ],
+    'favicon',
+  ];
+}
+
+/**
+ * Implementa hook_theme_suggestions_page_alter().
+ */
+function retailmediafc_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    // Adiciona sugestão de template específica para o tipo de conteúdo
+    $suggestions[] = 'page__node__' . $node->bundle();
+  }
+}

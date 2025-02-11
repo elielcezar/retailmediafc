@@ -1,0 +1,677 @@
+body {
+  background: #f1f1f0;
+  font-family: "Roboto", serif;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  color: #2d4189;
+  text-decoration: none;
+}
+
+a.btn {
+  display: inline-block;
+  background: #5eb7f4;
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 7px 21px;
+  transition: all 0.3s ease;
+}
+a.btn:hover {
+  background: #211855;
+}
+
+.button {
+  color: #fff;
+  background: #2d4189;
+  padding: 7px;
+  border-radius: 7px;
+  border: none;
+  width: 100%;
+  max-width: 300px;
+  margin: 15px auto;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.button:hover {
+  background: #211855;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+@media (orientation: portrait) {
+  .container {
+    padding: 7%;
+  }
+}
+
+/* tabs */
+#block-retailmediafc-primary-local-tasks ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+#block-retailmediafc-primary-local-tasks ul li a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  color: #222;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  margin: 0 5px;
+  border-top: 2px solid #ccc;
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+}
+#block-retailmediafc-primary-local-tasks ul li a:hover {
+  background: #2d4189;
+  color: #fff;
+}
+
+.messages__wrapper {
+  background: #cdf6cd;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.messages__wrapper .messages--status:nth-child(2) {
+  display: none;
+}
+
+div[role=alert] {
+  padding: 15px 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background: #f6cdcd;
+}
+
+table {
+  width: 100%;
+  background: #fff;
+  border-collapse: collapse;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-size: 16px;
+}
+table thead {
+  background: #000;
+}
+table thead th {
+  padding: 15px !important;
+  color: #fff !important;
+}
+table thead th a {
+  color: #fff !important;
+}
+table thead th a:hover {
+  color: #2d4189 !important;
+}
+table tbody tr td {
+  padding: 15px !important;
+}
+table tbody tr td a {
+  color: #211855;
+}
+table tbody tr td a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+table tbody tr:hover td {
+  background-color: #f5f5f5 !important;
+}
+
+form input {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+@media (orientation: landscape) {
+  form input {
+    max-width: 500px;
+  }
+}
+
+/*--- MAIN HEADER ------------------------------------------------------------------------------------------------------------------------------*/
+header#mainheader {
+  width: 100%;
+  background: #f1f1f0;
+  margin: 0;
+  padding: 25px;
+}
+header#mainheader .container > div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  min-height: 85px;
+}
+header#mainheader .container > div #block-retailmediafc-site-branding {
+  position: absolute;
+  left: 0;
+  top: -21px;
+}
+header#mainheader .container > div #block-retailmediafc-site-branding img {
+  max-width: 115px;
+}
+header#mainheader .container > div ul {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+header#mainheader .container > div ul li {
+  margin-left: 20px;
+}
+header#mainheader .container > div ul li a {
+  text-transform: uppercase;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+header#mainheader .container > div ul li a[data-drupal-link-system-path="user/login"], header#mainheader .container > div ul li a[data-drupal-link-system-path="user/logout"] {
+  color: #fff;
+  background: #2d4189;
+  font-weight: 800;
+  padding: 7px 15px;
+}
+
+/*--- TOP BAR ---------------------------------------------------*/
+.top {
+  width: 100%;
+  background: #2d4189;
+  padding: 0;
+  margin: 0;
+  min-height: 200px;
+}
+
+/*--- EXTRAS TOP ---------------------------------------------------*/
+.extras-top {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/*--- MAIN CONTENT -----------------------------------------*/
+main {
+  width: 100%;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+@media (orientation: portrait) {
+  main {
+    flex-direction: column;
+  }
+}
+main .content {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (orientation: landscape) {
+  main .content {
+    width: 75%;
+  }
+}
+@media screen and (orientation: landscape) {
+  main .content .views-element-container {
+    width: 50%;
+  }
+}
+@media screen and (orientation: landscape) {
+  main aside {
+    width: 25%;
+  }
+}
+
+/*--- HOME ------------------------------------------------------*/
+.node-id-1 .extras-top {
+  display: none;
+}
+.node-id-1 main > .container {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+.node-id-1 main > .container .noticia-home .views-field-field-assunto,
+.node-id-1 main > .container .artigo-home .views-field-field-assunto,
+.node-id-1 main > .container .agenda-home .views-field-field-assunto {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+.node-id-1 main > .container .noticia-home .views-field-field-assunto a,
+.node-id-1 main > .container .artigo-home .views-field-field-assunto a,
+.node-id-1 main > .container .agenda-home .views-field-field-assunto a {
+  font-weight: 700;
+  color: #2d4189;
+}
+.node-id-1 main > .container .noticia-home .views-field-title,
+.node-id-1 main > .container .artigo-home .views-field-title,
+.node-id-1 main > .container .agenda-home .views-field-title {
+  font-size: 19px;
+}
+.node-id-1 main > .container .noticia-home .views-field-title a,
+.node-id-1 main > .container .artigo-home .views-field-title a,
+.node-id-1 main > .container .agenda-home .views-field-title a {
+  color: #222;
+  font-weight: 700;
+}
+.node-id-1 .extras-bottom {
+  background: #211855 url(img/bg-podcast-home.jpg) center center no-repeat;
+  background-size: cover;
+}
+.node-id-1 .extras-bottom .podcast .container .row {
+  display: flex;
+}
+.node-id-1 .extras-bottom .podcast .container .row .col-1 {
+  color: #fff;
+}
+@media (orientation: landscape) {
+  .node-id-1 .extras-bottom .podcast .container .row .col-1 {
+    width: 25%;
+  }
+}
+@media (orientation: landscape) {
+  .node-id-1 .extras-bottom .podcast .container .row .col-2 {
+    width: 75%;
+  }
+}
+.node-id-1 .extras-bottom .podcast .container .row .col-2 .podcasts-home {
+  display: flex;
+  gap: 20px;
+  margin: 100px 0 50px 0;
+}
+
+/*--- Noticia ------------------------------------------------------*/
+.node-type-noticia .top {
+  background: #2d4189 url(img/bg-top-internas.jpg) center no-repeat;
+  background-size: cover;
+}
+.node-type-noticia .top h3 {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/*--- Login ------------------------------------------------------*/
+.page-user-login #main-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-user-login #main-content div[aria-label="Mensagem de erro"] {
+  max-width: 350px;
+  text-align: center;
+}
+.page-user-login #main-content div[aria-label="Mensagem de erro"] a {
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  color: #000;
+  text-decoration: underline;
+}
+
+/*--- LOGIN DO USUARIO -------------------------------------------------------------------------------------------------------------------------*/
+.page-user-login #user-login-form {
+  width: 100%;
+  max-width: 350px;
+  padding: 170px 25px 25px 25px;
+  border-radius: 7px;
+  position: relative;
+  margin-bottom: 20px;
+}
+@media (orientation: portrait) {
+  .page-user-login #user-login-form {
+    max-width: 80%;
+    margin: auto 10%;
+  }
+}
+.page-user-login #user-login-form label {
+  display: block;
+  widtLoginhomeh: 100%;
+}
+.page-user-login #user-login-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+.page-user-login #user-login-form .description {
+  display: none;
+}
+
+/*--- MAIS PAGINAS INTERNAS ----------------------------------------------------------------------------------------*/
+.route-entity-user-canonical .container,
+.route-user-register .container,
+.route-user-pass .container,
+.route-entity-user-edit_form .container {
+  max-width: 100%;
+}
+@media (orientation: portrait) {
+  .route-entity-user-canonical .container,
+  .route-user-register .container,
+  .route-user-pass .container,
+  .route-entity-user-edit_form .container {
+    padding: 0;
+  }
+}
+@media (orientation: landscape) {
+  .route-entity-user-canonical .container,
+  .route-user-register .container,
+  .route-user-pass .container,
+  .route-entity-user-edit_form .container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+}
+.route-entity-user-canonical .container main,
+.route-user-register .container main,
+.route-user-pass .container main,
+.route-entity-user-edit_form .container main {
+  padding: 50px;
+  background: #f9fafc;
+  width: calc(100% - 250px);
+}
+@media (orientation: portrait) {
+  .route-entity-user-canonical .container main,
+  .route-user-register .container main,
+  .route-user-pass .container main,
+  .route-entity-user-edit_form .container main {
+    width: 100%;
+    padding: 7%;
+  }
+}
+.route-entity-user-canonical .container main h1,
+.route-user-register .container main h1,
+.route-user-pass .container main h1,
+.route-entity-user-edit_form .container main h1 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.route-entity-user-canonical .container main .form-item-current-pass,
+.route-user-register .container main .form-item-current-pass,
+.route-user-pass .container main .form-item-current-pass,
+.route-entity-user-edit_form .container main .form-item-current-pass {
+  display: none;
+}
+.route-entity-user-canonical .container main .password-confirm-message,
+.route-user-register .container main .password-confirm-message,
+.route-user-pass .container main .password-confirm-message,
+.route-entity-user-edit_form .container main .password-confirm-message {
+  display: none;
+}
+.route-entity-user-canonical .container main #user-form,
+.route-entity-user-canonical .container main #user-pass,
+.route-entity-user-canonical .container main #edit-field-uf,
+.route-entity-user-canonical .container main #user-login-form,
+.route-entity-user-canonical .container main #user-register-form,
+.route-user-register .container main #user-form,
+.route-user-register .container main #user-pass,
+.route-user-register .container main #edit-field-uf,
+.route-user-register .container main #user-login-form,
+.route-user-register .container main #user-register-form,
+.route-user-pass .container main #user-form,
+.route-user-pass .container main #user-pass,
+.route-user-pass .container main #edit-field-uf,
+.route-user-pass .container main #user-login-form,
+.route-user-pass .container main #user-register-form,
+.route-entity-user-edit_form .container main #user-form,
+.route-entity-user-edit_form .container main #user-pass,
+.route-entity-user-edit_form .container main #edit-field-uf,
+.route-entity-user-edit_form .container main #user-login-form,
+.route-entity-user-edit_form .container main #user-register-form {
+  padding: 25px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+.route-entity-user-canonical .container main #user-form label,
+.route-entity-user-canonical .container main #user-pass label,
+.route-entity-user-canonical .container main #edit-field-uf label,
+.route-entity-user-canonical .container main #user-login-form label,
+.route-entity-user-canonical .container main #user-register-form label,
+.route-user-register .container main #user-form label,
+.route-user-register .container main #user-pass label,
+.route-user-register .container main #edit-field-uf label,
+.route-user-register .container main #user-login-form label,
+.route-user-register .container main #user-register-form label,
+.route-user-pass .container main #user-form label,
+.route-user-pass .container main #user-pass label,
+.route-user-pass .container main #edit-field-uf label,
+.route-user-pass .container main #user-login-form label,
+.route-user-pass .container main #user-register-form label,
+.route-entity-user-edit_form .container main #user-form label,
+.route-entity-user-edit_form .container main #user-pass label,
+.route-entity-user-edit_form .container main #edit-field-uf label,
+.route-entity-user-edit_form .container main #user-login-form label,
+.route-entity-user-edit_form .container main #user-register-form label {
+  display: inline-block;
+  width: 100%;
+}
+.route-entity-user-canonical .container main #user-form .form-text,
+.route-entity-user-canonical .container main #user-form .form-email,
+.route-entity-user-canonical .container main #user-pass .form-text,
+.route-entity-user-canonical .container main #user-pass .form-email,
+.route-entity-user-canonical .container main #edit-field-uf .form-text,
+.route-entity-user-canonical .container main #edit-field-uf .form-email,
+.route-entity-user-canonical .container main #user-login-form .form-text,
+.route-entity-user-canonical .container main #user-login-form .form-email,
+.route-entity-user-canonical .container main #user-register-form .form-text,
+.route-entity-user-canonical .container main #user-register-form .form-email,
+.route-user-register .container main #user-form .form-text,
+.route-user-register .container main #user-form .form-email,
+.route-user-register .container main #user-pass .form-text,
+.route-user-register .container main #user-pass .form-email,
+.route-user-register .container main #edit-field-uf .form-text,
+.route-user-register .container main #edit-field-uf .form-email,
+.route-user-register .container main #user-login-form .form-text,
+.route-user-register .container main #user-login-form .form-email,
+.route-user-register .container main #user-register-form .form-text,
+.route-user-register .container main #user-register-form .form-email,
+.route-user-pass .container main #user-form .form-text,
+.route-user-pass .container main #user-form .form-email,
+.route-user-pass .container main #user-pass .form-text,
+.route-user-pass .container main #user-pass .form-email,
+.route-user-pass .container main #edit-field-uf .form-text,
+.route-user-pass .container main #edit-field-uf .form-email,
+.route-user-pass .container main #user-login-form .form-text,
+.route-user-pass .container main #user-login-form .form-email,
+.route-user-pass .container main #user-register-form .form-text,
+.route-user-pass .container main #user-register-form .form-email,
+.route-entity-user-edit_form .container main #user-form .form-text,
+.route-entity-user-edit_form .container main #user-form .form-email,
+.route-entity-user-edit_form .container main #user-pass .form-text,
+.route-entity-user-edit_form .container main #user-pass .form-email,
+.route-entity-user-edit_form .container main #edit-field-uf .form-text,
+.route-entity-user-edit_form .container main #edit-field-uf .form-email,
+.route-entity-user-edit_form .container main #user-login-form .form-text,
+.route-entity-user-edit_form .container main #user-login-form .form-email,
+.route-entity-user-edit_form .container main #user-register-form .form-text,
+.route-entity-user-edit_form .container main #user-register-form .form-email {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+@media (orientation: portrait) {
+  .route-entity-user-canonical .container main #user-form .form-text,
+  .route-entity-user-canonical .container main #user-form .form-email,
+  .route-entity-user-canonical .container main #user-pass .form-text,
+  .route-entity-user-canonical .container main #user-pass .form-email,
+  .route-entity-user-canonical .container main #edit-field-uf .form-text,
+  .route-entity-user-canonical .container main #edit-field-uf .form-email,
+  .route-entity-user-canonical .container main #user-login-form .form-text,
+  .route-entity-user-canonical .container main #user-login-form .form-email,
+  .route-entity-user-canonical .container main #user-register-form .form-text,
+  .route-entity-user-canonical .container main #user-register-form .form-email,
+  .route-user-register .container main #user-form .form-text,
+  .route-user-register .container main #user-form .form-email,
+  .route-user-register .container main #user-pass .form-text,
+  .route-user-register .container main #user-pass .form-email,
+  .route-user-register .container main #edit-field-uf .form-text,
+  .route-user-register .container main #edit-field-uf .form-email,
+  .route-user-register .container main #user-login-form .form-text,
+  .route-user-register .container main #user-login-form .form-email,
+  .route-user-register .container main #user-register-form .form-text,
+  .route-user-register .container main #user-register-form .form-email,
+  .route-user-pass .container main #user-form .form-text,
+  .route-user-pass .container main #user-form .form-email,
+  .route-user-pass .container main #user-pass .form-text,
+  .route-user-pass .container main #user-pass .form-email,
+  .route-user-pass .container main #edit-field-uf .form-text,
+  .route-user-pass .container main #edit-field-uf .form-email,
+  .route-user-pass .container main #user-login-form .form-text,
+  .route-user-pass .container main #user-login-form .form-email,
+  .route-user-pass .container main #user-register-form .form-text,
+  .route-user-pass .container main #user-register-form .form-email,
+  .route-entity-user-edit_form .container main #user-form .form-text,
+  .route-entity-user-edit_form .container main #user-form .form-email,
+  .route-entity-user-edit_form .container main #user-pass .form-text,
+  .route-entity-user-edit_form .container main #user-pass .form-email,
+  .route-entity-user-edit_form .container main #edit-field-uf .form-text,
+  .route-entity-user-edit_form .container main #edit-field-uf .form-email,
+  .route-entity-user-edit_form .container main #user-login-form .form-text,
+  .route-entity-user-edit_form .container main #user-login-form .form-email,
+  .route-entity-user-edit_form .container main #user-register-form .form-text,
+  .route-entity-user-edit_form .container main #user-register-form .form-email {
+    max-width: 100%;
+  }
+}
+.route-entity-user-canonical .container main #user-form .description,
+.route-entity-user-canonical .container main #user-pass .description,
+.route-entity-user-canonical .container main #edit-field-uf .description,
+.route-entity-user-canonical .container main #user-login-form .description,
+.route-entity-user-canonical .container main #user-register-form .description,
+.route-user-register .container main #user-form .description,
+.route-user-register .container main #user-pass .description,
+.route-user-register .container main #edit-field-uf .description,
+.route-user-register .container main #user-login-form .description,
+.route-user-register .container main #user-register-form .description,
+.route-user-pass .container main #user-form .description,
+.route-user-pass .container main #user-pass .description,
+.route-user-pass .container main #edit-field-uf .description,
+.route-user-pass .container main #user-login-form .description,
+.route-user-pass .container main #user-register-form .description,
+.route-entity-user-edit_form .container main #user-form .description,
+.route-entity-user-edit_form .container main #user-pass .description,
+.route-entity-user-edit_form .container main #edit-field-uf .description,
+.route-entity-user-edit_form .container main #user-login-form .description,
+.route-entity-user-edit_form .container main #user-register-form .description {
+  display: none;
+}
+.route-entity-user-canonical .container main #edit-field-uf,
+.route-user-register .container main #edit-field-uf,
+.route-user-pass .container main #edit-field-uf,
+.route-entity-user-edit_form .container main #edit-field-uf {
+  padding: 10px;
+  max-width: 180px;
+  margin-bottom: 30px;
+}
+.route-entity-user-canonical div[role=alert],
+.route-user-register div[role=alert],
+.route-user-pass div[role=alert],
+.route-entity-user-edit_form div[role=alert] {
+  display: block;
+  padding: 10px;
+  border: 2px solid red;
+}
+.route-entity-user-canonical div[role=alert] em[class=placeholder],
+.route-user-register div[role=alert] em[class=placeholder],
+.route-user-pass div[role=alert] em[class=placeholder],
+.route-entity-user-edit_form div[role=alert] em[class=placeholder] {
+  background: transparent;
+  color: #000 !important;
+}
+
+.route-user-register,
+.route-entity-user-edit_form {
+  background: #000;
+}
+.route-user-register #main-content,
+.route-entity-user-edit_form #main-content {
+  padding: 50px;
+  background: #f9fafc;
+  width: calc(100% - 250px);
+}
+@media (orientation: portrait) {
+  .route-user-register #main-content,
+  .route-entity-user-edit_form #main-content {
+    width: 100%;
+    padding: 7%;
+  }
+}
+
+.route-user-register #main-content h1 {
+  font-weight: 700;
+  padding: 10px 0 10px 50px;
+  background: transparent url(img/ico-newuser.png) left center no-repeat;
+  background-size: 40px;
+}
+
+#edit-status--wrapper,
+a#edit-delete {
+  display: none;
+}
+
+/*--- PAGINA DE UM USUARIO ----------------------------------------------------------------------------------------*/
+.route-entity-user-canonical {
+  background: #000;
+}
+.route-entity-user-canonical #main-content {
+  padding: 50px;
+  background: #f9fafc;
+  width: calc(100% - 250px);
+}
+.route-entity-user-canonical .views-field-field-nome-completo h1 {
+  font-weight: 700;
+  padding: 10px 0 10px 50px;
+  background: transparent url(img/ico-user.png) left center no-repeat;
+  background-size: 40px;
+  margin-bottom: 15px !important;
+}
+
+/*--- FOOTER ------------------------------------------------------------*/
+footer {
+  padding: 25px 0;
+  background: #211855 url(img/bg-footer.jpg) center center no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+footer .container .row {
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=style.css.map */

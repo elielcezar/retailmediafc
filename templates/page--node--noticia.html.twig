@@ -1,0 +1,47 @@
+{# Template específico para páginas de notícia #}
+
+<header role="banner" id="mainheader">
+  <div class="container">        
+    {{ page.header }}
+  </div>
+</header>
+
+<div class="top">
+  <div class="container">
+    <h3>/// Notícias e Tendências from page-node-noticia.htmlk.twig</h3>
+  </div>
+</div>
+
+<div class="extras-top">
+  <div class="container">
+    {{ page.extrastop }}
+  </div>
+</div>
+
+<main role="main" class="page-noticia">
+  <div class="container">
+    {# Coluna principal com o conteúdo #}
+    <div class="content">
+      {{ page.content }}
+    </div>
+
+    {# Sidebar específica para notícias #}
+    {% if page.sidebar %}
+      <aside class="sidebar sidebar-noticia">
+        {{ page.sidebar }}
+      </aside>
+    {% endif %}  
+  </div>
+</main>
+
+<div class="extras-bottom">
+  <div class="container">
+    {{ page.extrasbottom }}
+  </div>
+</div>
+
+{% if page.footer %}
+  <footer role="contentinfo">
+    {{ page.footer }}
+  </footer>
+{% endif %} 
