@@ -1,10 +1,4 @@
-{# Template específico para páginas de notícia #}
-
-<header role="banner" id="mainheader">
-  <div class="container">        
-    {{ page.header }}
-  </div>
-</header>
+{% include '@retailmediafc/includes/header.html.twig' %}
 
 <div class="top">
   <div class="container">
@@ -12,11 +6,7 @@
   </div>
 </div>
 
-<div class="extras-top">
-  <div class="container">
-    {{ page.extrastop }}
-  </div>
-</div>
+{% include '@retailmediafc/includes/extras-top.html.twig' %}
 
 <main role="main" class="page-noticia">
   <div class="container">
@@ -26,55 +16,20 @@
       {{ drupal_view('mais_noticias') }}
     </div>
     {# Sidebar específica para notícias #}
-    {% if page.sidebar %}
-      <aside class="sidebar sidebar-noticia">        
-        {{ drupal_view('noticias_mais_lidas') }}
-        {{ page.sidebar }}
-      </aside>
-    {% endif %}  
+    
+    {% include '@retailmediafc/includes/sidebar.html.twig' %}
+    
   </div>
 </main>
 
-<div class="extras-bottom">
+{% include '@retailmediafc/includes/extras-bottom.html.twig' %}
+
+
+<div id="newsletter">
   <div class="container">
-    {{ page.extrasbottom }}
+    <h2><strong>INSCREVA-SE</strong> E FAÇA PARTE DA MAIOR COMUNIDADE DE <strong>RETAIL MEDIA</strong> DO BRASIL</h2>
+    {{ drupal_entity('webform', 'cadastre_se', 'default') }}
   </div>
 </div>
 
-<footer role="contentinfo">
-    <div class="container">
-        <div class="row">
-
-          <div class="col-1">
-            <h3>INSCREVA-SE E FAÇA PARTE<br/>
-                DA MAIOR COMUNIDADE DE<br/>
-                RETAIL MEDIA DO BRASIL
-            </h3>
-            <a href="#" class="btn">CADASTRO</a>
-          </div>
-
-          <div class="col-2">
-          </div>
-          
-          <div class="col-3">
-            <p>Siga-nos nas redes sociais:</p>
-            <ul class="social">
-              <li>
-                <a href="#">
-                  <img src="https://placehold.co/30x30" alt="">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="https://placehold.co/30x30" alt="">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="https://placehold.co/30x30" alt="">
-                </a>
-              </li>
-          </div>        
-        
-      </div>
-  </footer>
+{% include '@retailmediafc/includes/footer.html.twig' %}

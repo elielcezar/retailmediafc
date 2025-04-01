@@ -74,3 +74,17 @@ function retailmediafc_theme_suggestions_page_alter(array &$suggestions, array $
     $suggestions[] = 'page__node__' . $node->bundle();
   }
 }
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function retailmediafc_preprocess_page(&$variables) {
+  $roles = \Drupal::currentUser()->getRoles();
+  $variables['is_admin'] = in_array('administrator', $roles);
+  
+  // Debug info
+  $variables['image_toolkit'] = \Drupal::config('system.image')->get('toolkit');
+  $temp_directory = \Drupal::service('file_system')->getTempDirectory();
+  $variables['temporary_directory'] = $temp_directory;
+  $variables['is_writable'] = is_writable($temp_directory) ? 'Yes' : 'No';
+}

@@ -7,6 +7,8 @@ base theme: false
 libraries:
   - retailmediafc/global-styling
   - retailmediafc/google_fonts
+  - retailmediafc/font-awesome
+  - retailmediafc/swiper
 
 regions:
   header: Header  

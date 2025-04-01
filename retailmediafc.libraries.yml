@@ -7,12 +7,30 @@ global-styling:
       css/style.css: {}
   js:            
     js/script.js: {}
+    js/sticky-sidebar-new.js: {}
   dependencies:
     - core/jquery    
+    - core/drupal
 
 google_fonts:  
   css:
     theme:     
       'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'
+
+font-awesome:
+  version: 6.x
+  css:
+    theme:
+      css/all.min.css: {}
+  dependencies:
+    - core/jquery
+
+swiper:
+  version: 8.x
+  css:
+    theme:
+      libraries/swiper/swiper-bundle.min.css: {}
+  js:
+    libraries/swiper/swiper-bundle.min.js: {}
 
 

@@ -1,21 +1,12 @@
 {# Template específico para a página inicial #}
-{% if page.header %}
-    <header role="banner" id="mainheader">
-      <div class="container">        
-        {{ page.header }}
-      </div>
-    </header>
-{% endif %}
+
+{% include '@retailmediafc/includes/header.html.twig' %}
 
 <div class="top">  
-    {{ page.top }}  
+    {{ drupal_view('banners_home') }}      
 </div>
 
-<div class="extras-top">
-  <div class="container">
-    {{ page.extrastop }}
-  </div>
-</div>
+{% include '@retailmediafc/includes/extras-top.html.twig' %}
 
 <main role="main" class="home">
   <div class="container">
@@ -25,64 +16,52 @@
       {{ drupal_view('agenda_home') }}
     </div>
     
-    <aside class="sidebar">      
-      {{ page.sidebar }}        
-    </aside>
+    {% include '@retailmediafc/includes/sidebar.html.twig' %}    
 
   </div>
 </main>
 
-<div class="extras-bottom">  
-  <div class="podcast">
+<div class="podcast">
     <div class="container">
       <div class="row">
         <div class="col-1">          
-            <h2>Podcast</h2>
-            <p>Acompanhe os nossos podcasts com convidados especiais no YouTube.</p>
+            <img src="{{ base_path }}themes/retailmediafc/css/img/logo-podcast.png" alt="Logo Podcast">
         </div>
         <div class="col-2">
+          <img src="{{ base_path }}themes/retailmediafc/css/img/avatar-podcast.png" alt="Logo Podcast">
+        </div>
+        <div class="col-3">
           {{ drupal_view('podcasts_home') }}
         </div>
       </div>
     </div>
   </div>
+
+<div class="banner-mega">    
+      <div class="row">          
+          <picture>
+                <source 
+                    media="(max-width: 700px)"
+                    srcset="{{ base_path }}themes/retailmediafc/css/img/banner-conectado-mob.jpg"            
+                    alt="Retail Media FC">
+                <img 
+                    src="{{ base_path }}themes/retailmediafc/css/img/banner-conectado.webp"            
+                    alt="Retail Media FC">
+            </picture> 
+      </div>    
 </div>
 
+{% include '@retailmediafc/includes/extras-bottom.html.twig' %}
 
-  <footer role="contentinfo">
-    <div class="container">
-        <div class="row">
+<div id="newsletter">
+  <div class="container">
+    <h2>
+     <strong>INSCREVA-SE</strong> E FAÇA PARTE DA COMUNIDADE CAMPEÃ DE <strong>RETAIL MEDIA</strong> DO BRASIL    
+    </h2>
+    {{ drupal_entity('webform', 'cadastre_se', 'default') }}
+  </div>
+</div>
 
-          <div class="col-1">
-            <h3>INSCREVA-SE E FAÇA PARTE<br/>
-                DA MAIOR COMUNIDADE DE<br/>
-                RETAIL MEDIA DO BRASIL
-            </h3>
-            <a href="#" class="btn">CADASTRO</a>
-          </div>
+{% include '@retailmediafc/includes/footer.html.twig' %}
 
-          <div class="col-2">
-          </div>
-          
-          <div class="col-3">
-            <p>Siga-nos nas redes sociais:</p>
-            <ul class="social">
-              <li>
-                <a href="#">
-                  <img src="https://placehold.co/30x30" alt="">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="https://placehold.co/30x30" alt="">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="https://placehold.co/30x30" alt="">
-                </a>
-              </li>
-          </div>        
-        
-      </div>
-  </footer>
+

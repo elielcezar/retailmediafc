@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html{{ html_attributes }}>
   <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LTCK9WNQG4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LTCK9WNQG4');
+</script>
     <head-placeholder token="{{ placeholder_token }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
   </head>
   <body{{ attributes }}>
+   <div class="overlay"></div>
+
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}

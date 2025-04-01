@@ -1,10 +1,4 @@
-{# Template padrão para todas as páginas que não têm template específico #}
-
-<header role="banner" id="mainheader">
-  <div class="container">        
-    {{ page.header }}
-  </div>
-</header>
+{% include '@retailmediafc/includes/header.html.twig' %}
 
 <div class="top">
   <div class="container">
@@ -12,11 +6,7 @@
   </div>
 </div>
 
-<div class="extras-top">
-  <div class="container">
-    {{ page.extrastop }}
-  </div>
-</div>
+{% include '@retailmediafc/includes/extras-top.html.twig' %}
 
 <main role="main">
   <div class="container">
@@ -24,22 +14,18 @@
       {{ page.content }}
     </div>
 
-    {% if page.sidebar %}
-      <aside class="sidebar">
-        {{ page.sidebar }}
-      </aside>
-    {% endif %}  
+    {% include '@retailmediafc/includes/sidebar.html.twig' %}
+    
   </div>
 </main>
 
-<div class="extras-bottom">
+{% include '@retailmediafc/includes/extras-bottom.html.twig' %}
+
+<div id="newsletter">
   <div class="container">
-    {{ page.extrasbottom }}
+    <h2><strong>INSCREVA-SE</strong> E FAÇA PARTE DA MAIOR COMUNIDADE DE <strong>RETAIL MEDIA</strong> DO BRASIL</h2>
+    {{ drupal_entity('webform', 'cadastre_se', 'default') }}
   </div>
 </div>
 
-{% if page.footer %}
-  <footer role="contentinfo">
-    {{ page.footer }}
-  </footer>
-{% endif %}
+{% include '@retailmediafc/includes/footer.html.twig' %}

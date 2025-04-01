@@ -1,0 +1,33 @@
+{% include '@retailmediafc/includes/header.html.twig' %}
+
+<div class="top">
+  <div class="container">
+    <h3>/// Artigos e Estudos de Caso</h3>
+  </div>
+</div>
+
+{% include '@retailmediafc/includes/extras-top.html.twig' %}
+
+<main role="main" class="page-noticia">
+  <div class="container">
+    {# Coluna principal com o conteúdo #}
+    <div class="content">     
+      {{ drupal_view('noticia_individual') }}
+      {{ drupal_view('mais_noticias') }}
+    </div>
+    {# Sidebar específica para notícias #}
+    {% include '@retailmediafc/includes/sidebar.html.twig' %}
+  </div>
+</main>
+
+{% include '@retailmediafc/includes/extras-bottom.html.twig' %}
+
+
+<div id="newsletter">
+  <div class="container">
+    <h2><strong>INSCREVA-SE</strong> E FAÇA PARTE DA MAIOR COMUNIDADE DE <strong>RETAIL MEDIA</strong> DO BRASIL</h2>
+    {{ drupal_entity('webform', 'cadastre_se', 'default') }}
+  </div>
+</div>
+
+{% include '@retailmediafc/includes/footer.html.twig' %}

@@ -1,7 +1,23 @@
+ <div class="menu-mobile">
+    <a href="{{ path('<front>') }}">
+      <img src="{{ base_path }}sites/default/files/logo2.png" alt="Retail Media" class="logo">         
+    </a>
+    
+    <a class="menuBtn2 act">
+      <span class="lines"></span>
+    </a>    
+    <nav>
+     {{ drupal_menu('main') }}
+    </nav>    
+</div>
+
 {% if page.header %}
-  <header role="banner" id="mainheader">
+  <header role="banner" id="mainheader">    
     <div class="container">        
-      {{ page.header }}
+      {{ page.header }}      
     </div>
+      <a class="menuBtn">
+        <span class="lines"></span>
+      </a>
   </header>
 {% endif %}
