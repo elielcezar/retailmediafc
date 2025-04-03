@@ -53,15 +53,6 @@
 
 {% include '@retailmediafc/includes/extras-bottom.html.twig' %}
 
-<div id="newsletter">
-  <div class="container">
-    <h2>
-     <strong>INSCREVA-SE</strong> E FAÇA PARTE DA COMUNIDADE CAMPEÃ DE <strong>RETAIL MEDIA</strong> DO BRASIL    
-    </h2>
-    {{ drupal_entity('webform', 'cadastre_se', 'default') }}
-  </div>
-</div>
+{% include '@retailmediafc/includes/modal.html.twig' %}
 
 {% include '@retailmediafc/includes/footer.html.twig' %}
-
-

@@ -178,7 +178,7 @@ body {
   margin: 0;
 
   @media(orientation:landscape){
-    padding-top: 125px;       
+    padding-top: 115px;       
   }
 }
 
@@ -370,8 +370,8 @@ header#mainheader{
   margin: 0;  
 
   @media(orientation:landscape){
-    padding: 15px 25px;  
-    height: 125px;
+    padding: 10px 0 0 0;  
+    height: 115px;
     position: fixed;
     z-index: 50;
     top: 0;    
@@ -494,6 +494,132 @@ main{
       }
       img{
         margin-bottom: 20px;
+      }
+
+      .block{
+        margin-bottom: 20px;
+
+        .cadastrese{          
+            background: #002a61;
+            padding: 3% 7%;
+            border-radius: 5px;
+            max-width: 500px;
+            position: relative;
+
+            .webform-confirmation__message{              
+              padding: 20px;
+              background: #f5f5f5;
+              font-size: 16px;
+              line-height: 24px;     
+            }
+
+            .webform-confirmation__back{
+              display: none !important;
+            }
+        
+            h2{          
+              text-transform: uppercase;          
+              text-transform: uppercase;
+              font-weight: 500;
+              font-style: italic;
+              color: #fff;      
+              margin: 20px 0;    
+              font-size: 17px;   
+              line-height: 22px;
+              text-align: center;
+              
+              strong{
+                font-weight: 700;
+              }
+            }
+        
+            form{
+              display: flex;
+              gap: 20px;
+              position: relative;
+              margin-bottom: 85px;
+              flex-direction: column;
+             
+              input{
+                padding: 10px 12px 9px 12px;
+                font-size: 16px;
+                border-radius: 0;        
+                margin-bottom: 0;   
+                border: 2px solid $lightblue; 
+              }
+        
+              input#edit-submit{
+                margin: 0;
+                padding: 13px 35px;
+                font-weight: 800;
+                background: #c1272d;
+                border-radius: 0;
+                border: 2px solid #c1272d;
+                transition: all .3s ease;
+                border-radius: 0;      
+                width: 100%;  
+                max-width: 100%;
+                border: none;
+        
+                &:hover{
+                  background: #000;              
+                  cursor: pointer;              
+                  border: 2px solid #000;
+                }
+              }
+        
+              #edit-aceite--wrapper{    
+                width: 100%;
+                margin: 0;
+                position: absolute;
+                left: 0;    
+                bottom: -34px;
+                color: #fff;
+                bottom: -75px;
+                color: #fff;
+                font-size: 11px;
+                
+                @media(orientation:portrait){
+                  //bottom: -104px;
+                }
+        
+                a{
+                  color: $lightblue;
+                  text-decoration: underline;
+                }
+            
+                .fieldset-wrapper{
+                  display: flex;
+                  gap: 0;
+            
+                  .form-item-aceite-yes{
+                    label{
+                      display: none;
+                    }
+                  }
+              
+                  .js-form-item-aceite-no{
+                    display: none;
+                  }
+                }    
+              }
+            }
+        
+            .close{
+              position: absolute;
+              top: -10px;
+              right: -10px;
+              text-indent: -5000em;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              border: none;
+              background: #222 url(img/ico-close.png) center no-repeat;
+              background-size: 14px;
+              border: 2px solid #fff;
+              cursor: pointer;
+            }          
+        }
       }
     }
   }
@@ -760,9 +886,7 @@ main{
     background-size: cover;
     display: flex;
     align-items: center;  
-    padding: 100px 0;   
-    
-    
+    padding: 100px 0;       
 
     .container{   
       width: 100%;
@@ -864,7 +988,8 @@ main{
 /*--- Noticia / Artigo / Agenda------------------------------------------------------*/
 .node-type-agenda,
 .node-type-artigos,
-.node-type-noticia{
+.node-type-noticia,
+.node-type-webform{
   .top{
     background: $blue url(img/bg-top-internas2.jpg) center no-repeat;
     background-size: cover;
@@ -1238,102 +1363,6 @@ footer{
   }
 }
 
-
-#newsletter{
-  margin-bottom: 40px;
-  position: relative;
-
-  .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    
-    h2{          
-      text-transform: uppercase;          
-      text-transform: uppercase;
-      font-weight: 500;
-      font-style: italic;
-      color: $blue;      
-      margin-top: 0;    
-
-      @media(orientation:landscape){
-        max-width: 800px;
-        width: 70%;
-        font-size: 32px;
-      }
-
-      strong{
-        font-weight: 700;
-      }
-    }
-
-    form{
-      display: flex;
-      gap: 20px;
-      position: relative;
-      margin-bottom: 40px;
-
-      @media(orientation:portrait){
-        flex-direction: column;
-        margin-bottom: 100px;
-      }
-      
-      input{
-        padding: 15px;
-        font-size: 16px;
-        border-radius: 0;
-        border: 2px solid $darkblue;
-      }
-
-      input#edit-submit{
-        margin: 0;
-        padding: 13px 35px;
-        font-weight: 800;
-        background: #c1272d;
-        border-radius: 0;
-        border: 2px solid #c1272d;
-        transition: all .3s ease;
-
-        &:hover{
-          background: $darkblue;              
-          cursor: pointer;              
-          border: 2px solid $darkblue;
-        }
-      }
-    }
-  }  
-  
-  #edit-aceite--wrapper{    
-    width: 100%;
-    margin: 0;
-    position: absolute;
-    left: 0;    
-    bottom: -34px;
-    
-    @media(orientation:portrait){
-      bottom: -104px;
-    }
-
-    .fieldset-wrapper{
-      display: flex;
-      gap: 0;
-
-      .form-item-aceite-yes{
-        label{
-          display: none;
-        }
-      }
-  
-      .js-form-item-aceite-no{
-        display: none;
-      }
-    }    
-  }
-}  
-
 /*--- SIDEBAR STICKY ---------------------------------------------------*/
 .sidebar {
   transition: transform 0.1s ease;
@@ -1365,6 +1394,42 @@ footer{
   }
 }
 
+/*--- SHOPTALK ---*/
+.page-node-62{
+  .webform-submission-shoptalk-node-62-add-form{
+    max-width: 450px;
+    margin: 0 0 40px 0;
+    //margin: auto;
+    label{
+      display: inline-block;
+      width: 100%;
+    }
+    input{
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+    input.form-submit{
+      margin: 10px 0 0 0;
+      padding: 13px 35px;
+      font-weight: 800;
+      background: #c1272d;
+      border-radius: 0;
+      border: 2px solid #c1272d;
+      transition: all .3s ease;        
+      width: 100%;  
+      max-width: 100%;
+      border: none;
+
+      &:hover{
+        background: #000;              
+        cursor: pointer;              
+        border: 2px solid #000;
+      }
+    }
+  }
+}
+
+
 
 /*-------------------------------------*/
 /* Correção para o Swiper */
@@ -1395,4 +1460,148 @@ footer{
   height: auto;
   max-width: 100%;
   display: block;
+}
+
+
+
+/*******************************************/
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 50;
+
+  &.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;      
+  }
+
+  .content{
+    background: #002a61;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 320px;
+    position: relative;
+
+    .webform-confirmation__message{              
+      padding: 20px;
+      background: #f5f5f5;
+      font-size: 16px;
+      line-height: 24px;     
+    }
+
+    .webform-confirmation__back{
+      display: none !important;
+    }
+
+    h2{          
+      text-transform: uppercase;          
+      text-transform: uppercase;
+      font-weight: 500;
+      font-style: italic;
+      color: #fff;      
+      margin: 20px 0;    
+      font-size: 21px;   
+      line-height: 24px;
+      text-align: center;
+      
+      strong{
+        font-weight: 700;
+      }
+    }
+
+    form{
+      display: flex;
+      gap: 20px;
+      position: relative;
+      margin-bottom: 85px;
+      flex-direction: column;
+      
+      input{
+        padding: 10px 12px 9px 12px;
+        font-size: 16px;
+        border-radius: 0;        
+        margin-bottom: 0;   
+        border: 2px solid $lightblue;
+      }
+
+      input.form-submit{
+        margin: 0;
+        padding: 13px 35px;
+        font-weight: 800;
+        background: #c1272d;
+        border-radius: 0;
+        border: 2px solid #c1272d;
+        transition: all .3s ease;        
+        width: 100%;  
+        max-width: 100%;
+        border: none;
+
+        &:hover{
+          background: #000;              
+          cursor: pointer;              
+          border: 2px solid #000;
+        }
+      }
+
+      fieldset[data-drupal-selector="edit-aceite"]{    
+        width: 100%;
+        margin: 0;
+        position: absolute;
+        left: 0;    
+        bottom: -34px;
+        color: #fff;
+        bottom: -75px;
+        color: #fff;
+        font-size: 11px;
+        
+        @media(orientation:portrait){
+          //bottom: -104px;
+        }
+
+        a{
+          color: $lightblue;
+          text-decoration: underline;
+        }
+    
+        .fieldset-wrapper{
+          display: flex;
+          gap: 0;
+    
+          .form-item-aceite-yes{
+            label{
+              display: none;
+            }
+          }
+      
+          .js-form-item-aceite-no{
+            display: none;
+          }
+        }    
+      }
+    }
+
+    .close{
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      text-indent: -5000em;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      background: #222 url(img/ico-close.png) center no-repeat;
+      background-size: 14px;
+      border: 2px solid #fff;
+      cursor: pointer;
+    }
+
+  }
+  
 }

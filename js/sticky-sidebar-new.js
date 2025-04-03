@@ -6,7 +6,7 @@
   // Executar quando o documento estiver pronto
   $(document).ready(function() {
     
-    const sidebar = $('.sidebar');
+    const sidebar = $('.sidebar_sticky');
     const main = $('main');    
     
     if (sidebar.length === 0 || main.length === 0) {      

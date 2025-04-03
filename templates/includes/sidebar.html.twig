@@ -3,9 +3,17 @@
     {{ page.sidebar }}
   {% endif %}   
   
-  <img src="{{ base_path }}themes/retailmediafc/css/img/b4.jpg" alt="">
+  <div class="block">
+    <a href="https://www.instagram.com/megamidiagroup/" target="_blank">
+      <img src="{{ base_path }}themes/retailmediafc/css/img/b5.jpg" alt="">
+    </a>
+  </div>
+
+  <div class="block">
+    <div class="cadastrese">
+      <h2>ENTRE PARA O TIME QUE ESTÁ REVOLUCIONANDO O RETAIL MEDIA NO BRASIL. <strong>VEM COM A GENTE!</strong></h2>
+      {{ drupal_entity('webform', 'cadastre_se', 'default') }}
+    </div>
+  </div>  
   
-  <a href="https://onehub.megamidia.com.br/megamidiagroup" target="_blank">
-    <img src="{{ base_path }}themes/retailmediafc/css/img/b5.jpg" alt="">
-  </a>
 </aside>

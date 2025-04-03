@@ -1,19 +1,22 @@
-{% include '@retailmediafc/includes/header.html.twig' %}
+ {% include '@retailmediafc/includes/header.html.twig' %}
 
 <div class="top">
   <div class="container">
-       <h1>/// {{ node.label }}</h1> 
+    <h3>/// Notícias e Tendências</h3>
   </div>
 </div>
 
 {% include '@retailmediafc/includes/extras-top.html.twig' %}
 
-<main role="main">
+<main role="main" class="page-noticia">
   <div class="container">
+    {# Coluna principal com o conteúdo #}
     <div class="content">
-      {{ page.content }}
+      {{ drupal_view('noticia_individual') }}
+      {{ drupal_view('mais_noticias') }}
     </div>
-
+    {# Sidebar específica para notícias #}
+    
     {% include '@retailmediafc/includes/sidebar.html.twig' %}
     
   </div>
@@ -22,4 +25,3 @@
 {% include '@retailmediafc/includes/extras-bottom.html.twig' %}
 
 {% include '@retailmediafc/includes/footer.html.twig' %}
-ooter.html.twig' %}

@@ -276,7 +276,7 @@ body {
 }
 @media (orientation: landscape) {
   body {
-    padding-top: 125px;
+    padding-top: 115px;
   }
 }
 
@@ -445,8 +445,8 @@ header#mainheader {
 }
 @media (orientation: landscape) {
   header#mainheader {
-    padding: 15px 25px;
-    height: 125px;
+    padding: 10px 0 0 0;
+    height: 115px;
     position: fixed;
     z-index: 50;
     top: 0;
@@ -558,6 +558,110 @@ header#mainheader .container > div ul li a[data-drupal-link-system-path="user/lo
 }
 main .container .sidebar img {
   margin-bottom: 20px;
+}
+main .container .sidebar .block {
+  margin-bottom: 20px;
+}
+main .container .sidebar .block .cadastrese {
+  background: #002a61;
+  padding: 3% 7%;
+  border-radius: 5px;
+  max-width: 500px;
+  position: relative;
+}
+main .container .sidebar .block .cadastrese .webform-confirmation__message {
+  padding: 20px;
+  background: #f5f5f5;
+  font-size: 16px;
+  line-height: 24px;
+}
+main .container .sidebar .block .cadastrese .webform-confirmation__back {
+  display: none !important;
+}
+main .container .sidebar .block .cadastrese h2 {
+  text-transform: uppercase;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: italic;
+  color: #fff;
+  margin: 20px 0;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
+}
+main .container .sidebar .block .cadastrese h2 strong {
+  font-weight: 700;
+}
+main .container .sidebar .block .cadastrese form {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  margin-bottom: 85px;
+  flex-direction: column;
+}
+main .container .sidebar .block .cadastrese form input {
+  padding: 10px 12px 9px 12px;
+  font-size: 16px;
+  border-radius: 0;
+  margin-bottom: 0;
+  border: 2px solid #5eb7f4;
+}
+main .container .sidebar .block .cadastrese form input#edit-submit {
+  margin: 0;
+  padding: 13px 35px;
+  font-weight: 800;
+  background: #c1272d;
+  border-radius: 0;
+  border: 2px solid #c1272d;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+}
+main .container .sidebar .block .cadastrese form input#edit-submit:hover {
+  background: #000;
+  cursor: pointer;
+  border: 2px solid #000;
+}
+main .container .sidebar .block .cadastrese form #edit-aceite--wrapper {
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  bottom: -34px;
+  color: #fff;
+  bottom: -75px;
+  color: #fff;
+  font-size: 11px;
+}
+main .container .sidebar .block .cadastrese form #edit-aceite--wrapper a {
+  color: #5eb7f4;
+  text-decoration: underline;
+}
+main .container .sidebar .block .cadastrese form #edit-aceite--wrapper .fieldset-wrapper {
+  display: flex;
+  gap: 0;
+}
+main .container .sidebar .block .cadastrese form #edit-aceite--wrapper .fieldset-wrapper .form-item-aceite-yes label {
+  display: none;
+}
+main .container .sidebar .block .cadastrese form #edit-aceite--wrapper .fieldset-wrapper .js-form-item-aceite-no {
+  display: none;
+}
+main .container .sidebar .block .cadastrese .close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  text-indent: -5000em;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: #222 url(img/ico-close.png) center no-repeat;
+  background-size: 14px;
+  border: 2px solid #fff;
+  cursor: pointer;
 }
 
 /*--- HOME ------------------------------------------------------*/
@@ -919,7 +1023,8 @@ main .container .sidebar img {
 /*--- Noticia / Artigo / Agenda------------------------------------------------------*/
 .node-type-agenda .top,
 .node-type-artigos .top,
-.node-type-noticia .top {
+.node-type-noticia .top,
+.node-type-webform .top {
   background: #2d4189 url(img/bg-top-internas2.jpg) center no-repeat;
   background-size: cover;
   display: flex;
@@ -929,18 +1034,21 @@ main .container .sidebar img {
 @media (orientation: portrait) {
   .node-type-agenda .top,
   .node-type-artigos .top,
-  .node-type-noticia .top {
+  .node-type-noticia .top,
+  .node-type-webform .top {
     padding: 0;
   }
 }
 .node-type-agenda .top .container,
 .node-type-artigos .top .container,
-.node-type-noticia .top .container {
+.node-type-noticia .top .container,
+.node-type-webform .top .container {
   width: 100%;
 }
 .node-type-agenda .top .container h3,
 .node-type-artigos .top .container h3,
-.node-type-noticia .top .container h3 {
+.node-type-noticia .top .container h3,
+.node-type-webform .top .container h3 {
   color: #fff;
   text-transform: uppercase;
   font-size: 32px;
@@ -948,38 +1056,44 @@ main .container .sidebar img {
 @media (orientation: landscape) {
   .node-type-agenda main .container,
   .node-type-artigos main .container,
-  .node-type-noticia main .container {
+  .node-type-noticia main .container,
+  .node-type-webform main .container {
     display: flex;
     gap: 40px;
   }
 }
 .node-type-agenda main .container .content,
 .node-type-artigos main .container .content,
-.node-type-noticia main .container .content {
+.node-type-noticia main .container .content,
+.node-type-webform main .container .content {
   display: block;
 }
 @media (orientation: landscape) {
   .node-type-agenda main .container .content,
   .node-type-artigos main .container .content,
-  .node-type-noticia main .container .content {
+  .node-type-noticia main .container .content,
+  .node-type-webform main .container .content {
     width: 75%;
   }
 }
 .node-type-agenda main .container .content .mais-noticias,
 .node-type-artigos main .container .content .mais-noticias,
-.node-type-noticia main .container .content .mais-noticias {
+.node-type-noticia main .container .content .mais-noticias,
+.node-type-webform main .container .content .mais-noticias {
   margin: 40px 0;
 }
 .node-type-agenda main .container .content .mais-noticias h3,
 .node-type-artigos main .container .content .mais-noticias h3,
-.node-type-noticia main .container .content .mais-noticias h3 {
+.node-type-noticia main .container .content .mais-noticias h3,
+.node-type-webform main .container .content .mais-noticias h3 {
   color: #5d4999;
   margin: 0 0 20px 0;
   font-size: 24px;
 }
 .node-type-agenda main .container .content .mais-noticias .row,
 .node-type-artigos main .container .content .mais-noticias .row,
-.node-type-noticia main .container .content .mais-noticias .row {
+.node-type-noticia main .container .content .mais-noticias .row,
+.node-type-webform main .container .content .mais-noticias .row {
   padding-bottom: 40px;
   margin-bottom: 40px;
   border-bottom: 1px solid #ccc;
@@ -987,14 +1101,16 @@ main .container .sidebar img {
 @media (orientation: landscape) {
   .node-type-agenda main .container .content .mais-noticias .row,
   .node-type-artigos main .container .content .mais-noticias .row,
-  .node-type-noticia main .container .content .mais-noticias .row {
+  .node-type-noticia main .container .content .mais-noticias .row,
+  .node-type-webform main .container .content .mais-noticias .row {
     display: flex;
     gap: 20px;
   }
 }
 .node-type-agenda main .container .content .mais-noticias .row .col-1,
 .node-type-artigos main .container .content .mais-noticias .row .col-1,
-.node-type-noticia main .container .content .mais-noticias .row .col-1 {
+.node-type-noticia main .container .content .mais-noticias .row .col-1,
+.node-type-webform main .container .content .mais-noticias .row .col-1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1002,13 +1118,15 @@ main .container .sidebar img {
 @media (orientation: landscape) {
   .node-type-agenda main .container .content .mais-noticias .row .col-1,
   .node-type-artigos main .container .content .mais-noticias .row .col-1,
-  .node-type-noticia main .container .content .mais-noticias .row .col-1 {
+  .node-type-noticia main .container .content .mais-noticias .row .col-1,
+  .node-type-webform main .container .content .mais-noticias .row .col-1 {
     width: 75%;
   }
 }
 .node-type-agenda main .container .content .mais-noticias .row .col-1 .data,
 .node-type-artigos main .container .content .mais-noticias .row .col-1 .data,
-.node-type-noticia main .container .content .mais-noticias .row .col-1 .data {
+.node-type-noticia main .container .content .mais-noticias .row .col-1 .data,
+.node-type-webform main .container .content .mais-noticias .row .col-1 .data {
   font-size: 14px;
   font-weight: 500;
   margin: 20px 0 10px 0;
@@ -1016,65 +1134,75 @@ main .container .sidebar img {
 @media (orientation: landscape) {
   .node-type-agenda main .container .content .mais-noticias .row .col-1 .titulo,
   .node-type-artigos main .container .content .mais-noticias .row .col-1 .titulo,
-  .node-type-noticia main .container .content .mais-noticias .row .col-1 .titulo {
+  .node-type-noticia main .container .content .mais-noticias .row .col-1 .titulo,
+  .node-type-webform main .container .content .mais-noticias .row .col-1 .titulo {
     max-width: 80%;
   }
 }
 .node-type-agenda main .container .content .mais-noticias .row .col-1 .titulo h4,
 .node-type-artigos main .container .content .mais-noticias .row .col-1 .titulo h4,
-.node-type-noticia main .container .content .mais-noticias .row .col-1 .titulo h4 {
+.node-type-noticia main .container .content .mais-noticias .row .col-1 .titulo h4,
+.node-type-webform main .container .content .mais-noticias .row .col-1 .titulo h4 {
   font-size: 20px;
   margin: 0 0 10px 0;
 }
 .node-type-agenda main .container .content .mais-noticias .row .col-1 .titulo h4 a,
 .node-type-artigos main .container .content .mais-noticias .row .col-1 .titulo h4 a,
-.node-type-noticia main .container .content .mais-noticias .row .col-1 .titulo h4 a {
+.node-type-noticia main .container .content .mais-noticias .row .col-1 .titulo h4 a,
+.node-type-webform main .container .content .mais-noticias .row .col-1 .titulo h4 a {
   color: #000;
   font-weight: 700;
 }
 @media (orientation: landscape) {
   .node-type-agenda main .container .content .mais-noticias .row .col-2,
   .node-type-artigos main .container .content .mais-noticias .row .col-2,
-  .node-type-noticia main .container .content .mais-noticias .row .col-2 {
+  .node-type-noticia main .container .content .mais-noticias .row .col-2,
+  .node-type-webform main .container .content .mais-noticias .row .col-2 {
     width: 20%;
   }
 }
 @media (orientation: landscape) {
   .node-type-agenda main .container .sidebar,
   .node-type-artigos main .container .sidebar,
-  .node-type-noticia main .container .sidebar {
+  .node-type-noticia main .container .sidebar,
+  .node-type-webform main .container .sidebar {
     width: 20%;
   }
 }
 .node-type-agenda main .container .sidebar .mais-lidas,
 .node-type-artigos main .container .sidebar .mais-lidas,
-.node-type-noticia main .container .sidebar .mais-lidas {
+.node-type-noticia main .container .sidebar .mais-lidas,
+.node-type-webform main .container .sidebar .mais-lidas {
   margin-bottom: 40px;
 }
 .node-type-agenda main .container .sidebar .mais-lidas h3,
 .node-type-artigos main .container .sidebar .mais-lidas h3,
-.node-type-noticia main .container .sidebar .mais-lidas h3 {
+.node-type-noticia main .container .sidebar .mais-lidas h3,
+.node-type-webform main .container .sidebar .mais-lidas h3 {
   color: #5d4999;
   margin: 0 0 20px 0;
   font-size: 21px;
 }
 .node-type-agenda main .container .sidebar .mais-lidas .views-row,
 .node-type-artigos main .container .sidebar .mais-lidas .views-row,
-.node-type-noticia main .container .sidebar .mais-lidas .views-row {
+.node-type-noticia main .container .sidebar .mais-lidas .views-row,
+.node-type-webform main .container .sidebar .mais-lidas .views-row {
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid #ccc;
 }
 .node-type-agenda main .container .sidebar .mais-lidas .views-row .views-field-created,
 .node-type-artigos main .container .sidebar .mais-lidas .views-row .views-field-created,
-.node-type-noticia main .container .sidebar .mais-lidas .views-row .views-field-created {
+.node-type-noticia main .container .sidebar .mais-lidas .views-row .views-field-created,
+.node-type-webform main .container .sidebar .mais-lidas .views-row .views-field-created {
   font-size: 14px;
   font-weight: 700;
   margin: 20px 0 10px 0;
 }
 .node-type-agenda main .container .sidebar .mais-lidas .views-row .views-field-title a,
 .node-type-artigos main .container .sidebar .mais-lidas .views-row .views-field-title a,
-.node-type-noticia main .container .sidebar .mais-lidas .views-row .views-field-title a {
+.node-type-noticia main .container .sidebar .mais-lidas .views-row .views-field-title a,
+.node-type-webform main .container .sidebar .mais-lidas .views-row .views-field-title a {
   color: #000;
   font-weight: 800;
 }
@@ -1465,91 +1593,6 @@ footer .container .row ul.social li a i {
   display: inline-block;
 }
 
-#newsletter {
-  margin-bottom: 40px;
-  position: relative;
-}
-#newsletter .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-#newsletter .container h2 {
-  text-transform: uppercase;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-style: italic;
-  color: #2d4189;
-  margin-top: 0;
-}
-@media (orientation: landscape) {
-  #newsletter .container h2 {
-    max-width: 800px;
-    width: 70%;
-    font-size: 32px;
-  }
-}
-#newsletter .container h2 strong {
-  font-weight: 700;
-}
-#newsletter .container form {
-  display: flex;
-  gap: 20px;
-  position: relative;
-  margin-bottom: 40px;
-}
-@media (orientation: portrait) {
-  #newsletter .container form {
-    flex-direction: column;
-    margin-bottom: 100px;
-  }
-}
-#newsletter .container form input {
-  padding: 15px;
-  font-size: 16px;
-  border-radius: 0;
-  border: 2px solid #211855;
-}
-#newsletter .container form input#edit-submit {
-  margin: 0;
-  padding: 13px 35px;
-  font-weight: 800;
-  background: #c1272d;
-  border-radius: 0;
-  border: 2px solid #c1272d;
-  transition: all 0.3s ease;
-}
-#newsletter .container form input#edit-submit:hover {
-  background: #211855;
-  cursor: pointer;
-  border: 2px solid #211855;
-}
-#newsletter #edit-aceite--wrapper {
-  width: 100%;
-  margin: 0;
-  position: absolute;
-  left: 0;
-  bottom: -34px;
-}
-@media (orientation: portrait) {
-  #newsletter #edit-aceite--wrapper {
-    bottom: -104px;
-  }
-}
-#newsletter #edit-aceite--wrapper .fieldset-wrapper {
-  display: flex;
-  gap: 0;
-}
-#newsletter #edit-aceite--wrapper .fieldset-wrapper .form-item-aceite-yes label {
-  display: none;
-}
-#newsletter #edit-aceite--wrapper .fieldset-wrapper .js-form-item-aceite-no {
-  display: none;
-}
-
 /*--- SIDEBAR STICKY ---------------------------------------------------*/
 .sidebar {
   transition: transform 0.1s ease;
@@ -1570,6 +1613,37 @@ footer .container .row ul.social li a i {
 /*--- POLITICA DE PROVACIDADE ---*/
 .node-id-32 .top .container h1 {
   max-width: 100%;
+}
+
+/*--- SHOPTALK ---*/
+.page-node-62 .webform-submission-shoptalk-node-62-add-form {
+  max-width: 450px;
+  margin: 0 0 40px 0;
+}
+.page-node-62 .webform-submission-shoptalk-node-62-add-form label {
+  display: inline-block;
+  width: 100%;
+}
+.page-node-62 .webform-submission-shoptalk-node-62-add-form input {
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.page-node-62 .webform-submission-shoptalk-node-62-add-form input.form-submit {
+  margin: 10px 0 0 0;
+  padding: 13px 35px;
+  font-weight: 800;
+  background: #c1272d;
+  border-radius: 0;
+  border: 2px solid #c1272d;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+}
+.page-node-62 .webform-submission-shoptalk-node-62-add-form input.form-submit:hover {
+  background: #000;
+  cursor: pointer;
+  border: 2px solid #000;
 }
 
 /*-------------------------------------*/
@@ -1601,4 +1675,121 @@ footer .container .row ul.social li a i {
   height: auto;
   max-width: 100%;
   display: block;
+}
+
+/*******************************************/
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 50;
+}
+#overlay.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#overlay .content {
+  background: #002a61;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 320px;
+  position: relative;
+}
+#overlay .content .webform-confirmation__message {
+  padding: 20px;
+  background: #f5f5f5;
+  font-size: 16px;
+  line-height: 24px;
+}
+#overlay .content .webform-confirmation__back {
+  display: none !important;
+}
+#overlay .content h2 {
+  text-transform: uppercase;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: italic;
+  color: #fff;
+  margin: 20px 0;
+  font-size: 21px;
+  line-height: 24px;
+  text-align: center;
+}
+#overlay .content h2 strong {
+  font-weight: 700;
+}
+#overlay .content form {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  margin-bottom: 85px;
+  flex-direction: column;
+}
+#overlay .content form input {
+  padding: 10px 12px 9px 12px;
+  font-size: 16px;
+  border-radius: 0;
+  margin-bottom: 0;
+  border: 2px solid #5eb7f4;
+}
+#overlay .content form input.form-submit {
+  margin: 0;
+  padding: 13px 35px;
+  font-weight: 800;
+  background: #c1272d;
+  border-radius: 0;
+  border: 2px solid #c1272d;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+}
+#overlay .content form input.form-submit:hover {
+  background: #000;
+  cursor: pointer;
+  border: 2px solid #000;
+}
+#overlay .content form fieldset[data-drupal-selector=edit-aceite] {
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  bottom: -34px;
+  color: #fff;
+  bottom: -75px;
+  color: #fff;
+  font-size: 11px;
+}
+#overlay .content form fieldset[data-drupal-selector=edit-aceite] a {
+  color: #5eb7f4;
+  text-decoration: underline;
+}
+#overlay .content form fieldset[data-drupal-selector=edit-aceite] .fieldset-wrapper {
+  display: flex;
+  gap: 0;
+}
+#overlay .content form fieldset[data-drupal-selector=edit-aceite] .fieldset-wrapper .form-item-aceite-yes label {
+  display: none;
+}
+#overlay .content form fieldset[data-drupal-selector=edit-aceite] .fieldset-wrapper .js-form-item-aceite-no {
+  display: none;
+}
+#overlay .content .close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  text-indent: -5000em;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: #222 url(img/ico-close.png) center no-repeat;
+  background-size: 14px;
+  border: 2px solid #fff;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

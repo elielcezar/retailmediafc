@@ -37,6 +37,75 @@
         prevEl: '.swiper-button-prev',
       }
     });
+
+    
+    /********************************************** */
+
+    const modalOverlay = document.querySelector(".page-node-1 #overlay");
+    const modalContent = document.querySelector(".page-node-1 #overlay .content");
+    const modalClose = document.querySelector(".page-node-1 #overlay button");
+
+    modalContent.addEventListener('click', function(e){        
+        e.stopPropagation();    
+        return false;
+    })
+
+    modalOverlay.addEventListener('click', function(){
+        modalOverlay.classList.remove('active');
+        localStorage.setItem('modalShown', 'true');
+    })
+
+    modalClose.addEventListener('click', function(){
+        modalOverlay.classList.remove('active');
+        localStorage.setItem('modalShown', 'true');
+    })
+
+    if(modalOverlay){
+      const hasModalBeenShown = localStorage.getItem('modalShown');
+      
+      if (!hasModalBeenShown) {
+        modalOverlay.classList.add('active');
+        console.log('modalOverlay shown for the first time');
+      } else {
+        console.log('modalOverlay already shown before');
+      }
+    }
+    
+
+    /*const equipe = document.querySelectorAll("#equipe .item a");
+    const overlay = document.querySelector("#overlay");        
+
+    if(equipe){                        
+        equipe.forEach((item) => {                
+            item.addEventListener('click', function(e){
+                e.preventDefault();
+                const idAbout = item.getAttribute('href');
+                const about = document.querySelector(idAbout);
+                const close = document.querySelector(''+idAbout+' button');
+                about.classList.add('active');                        
+                overlay.classList.add('active');                  
+
+                about.addEventListener('click', function(e){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    return false;
+                })
+
+                close.addEventListener('click', function(){
+                    overlay.classList.remove('active');
+                    about.classList.remove('active');
+                })
+
+                overlay.addEventListener('click', function(){
+                    overlay.classList.remove('active');
+                    about.classList.remove('active');
+                })
+            })          
+        });            
+    }   */
+
+
   });
 })();
 
